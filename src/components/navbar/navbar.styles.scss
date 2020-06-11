@@ -1,0 +1,294 @@
+.hidden{
+    @media only screen and (max-width :600px){
+        display: none !important;
+    }
+}
+.visible{
+    animation: movedown 1.5s;
+}
+
+.nav-con{
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width :600px){
+        justify-content: space-between;
+        width: 100%;
+        padding: 4px 2px;
+        margin-left: 0;
+        margin-right: 0;
+        border-bottom: 1px solid black;
+    }
+}
+.navigation {
+    &__checkbox {
+        order: 1;
+        display: none;
+    }
+    &__button {
+        z-index: 10;
+        order: 1;
+
+        @media only screen and (max-width :600px){
+            margin-right: 0.7rem;
+        }
+        @media only screen and (min-width :600px){
+            display: none;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 10px;
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: black;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+             top: -.8rem; 
+             @media only screen and (max-width :600px){
+                top: -0.5rem;
+            }
+        }
+        &::after { 
+            top: .8rem; 
+            @media only screen and (max-width :600px){
+                top: 0.5rem;
+            }
+        }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
+
+
+.section-navbar{
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 0.4rem 1rem rgba(94, 93, 93, 0.219);
+    @media only screen and (max-width: 650px) {
+        padding: 5px 5px;
+    }
+}
+
+.navbar{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-logo{
+        padding: 0;
+        margin-right: 5rem;
+        order: 0;
+        &-img{
+            background-position: center;
+            width: 10rem;
+            height: 70px;
+            padding: 0;
+            margin:0 ;
+            transition: all 0.2s;
+            @media only screen and (max-width: 780px) {
+                width: 8rem;
+                height: 50px;
+            }
+            @media only screen and (max-width: 700px) {
+                width: 6rem;
+                height: 40px;
+            }
+            @media only screen and (max-width: 650px) {
+                width: 4rem;
+                height: 30px;
+            }
+        }
+
+        &-img:hover{
+            background-position: center;
+            width: 10.2rem;
+            height: 70px;
+            padding: 0;
+            margin:0 ;
+            @media only screen and (max-width: 780px) {
+                width: 8.2rem;
+                height: 50px;
+            }
+            @media only screen and (max-width: 700px) {
+                width: 6.2rem;
+                height: 40px;
+            }
+            @media only screen and (max-width: 650px) {
+                width: 4.2rem;
+                height: 30px;
+            }
+            @media only screen and (max-width: 650px) {
+                width: 4rem;
+                height: 30px;
+            }
+        }        
+    }
+
+    &-links{
+        order: 2;
+        display: flex;
+        font-size: 1rem;
+        font-weight: 500;
+        align-items: center;
+        text-transform: uppercase;
+        
+        
+        @media only screen and (max-width: 830px) {
+            font-size: 0.7rem;
+        }
+        @media only screen and (max-width: 700px) {
+            font-size: 0.6rem;
+        }
+        @media only screen and (max-width: 650px) {
+            font-size: 0.6rem;
+        }
+        @media only screen and (max-width: 600px){
+           flex-direction: column;
+           width: 100%;
+           justify-content: flex-start;
+           align-items: flex-start;
+           overflow: hidden;
+        }
+    }
+
+    &-link{
+        margin-right: 2rem;
+        color: rgb(8, 8, 8);
+        transition: all 0.2s;
+        text-decoration: none;
+
+        &__4{
+            margin-right: 1rem;
+        }
+        @media only screen and (max-width: 650px) {
+            margin-right: 1rem;
+        }
+        @media only screen and (max-width: 600px) {
+            margin-left: 0;
+            padding: 10px;
+            width: 90%;
+            border-bottom: 1px solid rgba(152, 28, 235, 0.527);
+        }
+    }
+
+    &-link:not(:last-child){
+        &:hover{
+            letter-spacing: 0.6px;
+            color: #981CEB;
+        }
+        &:active{
+            letter-spacing: 0.4px;
+            color: violet;
+        }
+    }
+
+    .btn,.btn::after,.btn::before{
+        padding: 12px 14px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s all;
+        @media only screen and (max-width: 850px) {
+            padding: 8px 10px;
+        }
+        @media only screen and (max-width: 650px) {
+            padding: 6px 8px;
+        }
+        @media only screen and (max-width: 740px) {
+            font-size: 1rem;
+            padding: 6px 8px;
+        }
+        @media only screen and (max-width: 710px) {
+            padding: 6px 8px;
+            font-size: 0.8rem;
+        }
+        @media only screen and (max-width: 600px) {
+            padding: 12px 0;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        
+    }
+    .btn:hover{
+        transform: translateY(-5px);
+        opacity: 1;
+        box-shadow: 0rem 0.8rem 1rem rgba(94, 93, 93, 0.486);
+        @media only screen and (max-width: 600px) {
+            transform: translateY(0);
+            opacity: 1;
+            box-shadow: 0rem 0rem 0rem rgba(94, 93, 93, 0.486);
+        }
+
+    }
+    .btn:active{
+        transform: translateY(-2px);
+        box-shadow: 0rem 0.3rem 1rem rgba(94, 93, 93, 0.486);
+        opacity: 1;
+    }
+
+    .btn-green{
+        background: #13aa52;
+        color: #fff;
+        @media only screen and (max-width: 600px) {
+            background-color: white;
+            color: green;
+            border: none;
+        }
+    }
+    .btn-purple{
+        background: #981CEB;
+        color: #fff;
+        @media only screen and (max-width: 600px) {
+            background-color: white;
+            color: #981CEB;
+            border: none;
+        }
+    }
+   }
+
+
+@keyframes movedown {
+    0%{
+        height: 0px;
+    }
+    50%{
+        height: 142px;
+    }
+    100%{
+        height: 100%;
+    }
+  }
