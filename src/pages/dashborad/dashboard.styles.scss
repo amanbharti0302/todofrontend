@@ -1,0 +1,165 @@
+.dashboard{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #7b68ee;
+    overflow: hidden;
+}
+.dash-nav{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+}
+.dash-main{
+    position: relative;
+    
+}
+
+
+.pr{
+    color: white;
+    padding: 0.5rem;
+    background-color: #7b68ee;
+    
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+
+    &-nav{
+        background-color: #9f8fff;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &-name{
+        margin: 0 1rem; 
+    }
+
+    &-description{
+        margin: 0 1rem; 
+    }
+
+    &-invite{
+        margin: 0 1rem; 
+        flex: 1;
+        display: flex;
+        align-items: center;
+        
+        &__link{
+            text-decoration: none;
+            transition: 0.1s;
+
+            &:hover{
+                background-color: #3a66f8;
+                letter-spacing: 0.1rem;
+            }
+        
+        }
+    }
+
+    &-contr{
+        margin-left: auto;
+        margin-right: 1rem; 
+        transition: 0.1s;
+
+        &:hover{
+            background-color: #3a66f8;
+            letter-spacing: 0.1rem;
+        }
+        &__link{
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+.contributor-info{
+    position: absolute;
+    border-radius: 0.3rem;
+    padding: 1rem 0 1rem 1rem;
+    z-index: 10;
+    margin-top: 0.5rem;
+    right: 0;
+    width: 20%;
+    background-color: white;
+    min-height: 80vh;
+
+    &-heading{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #7b68ee;
+        border-bottom: 1px solid black;
+    }
+
+    &-invisible{
+        animation: moveright 2s;
+        animation-delay: -0.2s;
+        animation-fill-mode: forwards;
+    }
+
+    &-visible{
+        animation: moveleft 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes moveright {
+    0%{
+       margin-right: 0;
+    }
+    50%{
+        margin-right: -10rem;
+    }
+    100%{
+        margin-right: -100rem;
+    }
+  }
+
+@keyframes moveleft {
+    0%{
+        margin-right: -100rem;
+    }
+    50%{
+        margin-right: -10rem;;
+    }
+    100%{
+        margin-right: 0;
+    }
+  }
+
+.project-info{
+    padding: 5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info{
+
+    background-color: rgb(243, 231, 231);
+    width: 20rem;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+
+    &-box{
+        margin-top: 0.4rem;
+        border-top: black 1px solid;
+    }
+
+
+    &-add{
+        margin-top: 0.3rem;
+        opacity: 0.5;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.404);
+        }
+    }
+}
