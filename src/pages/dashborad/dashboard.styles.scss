@@ -2,7 +2,7 @@
     width: 100vw;
     min-height: 100vh;
     background-color: #7b68ee;
-    overflow: hidden;
+   overflow: hidden;
 }
 .dash-nav{
     width: 100%;
@@ -101,18 +101,13 @@
     }
 
     &-visible{
-        animation: moveleft 2s;
+        animation: moveleft 0.8s;
         animation-fill-mode: forwards;
     }
 }
 
 @keyframes moveright {
-    0%{
-       margin-right: 0;
-    }
-    50%{
-        margin-right: -10rem;
-    }
+    0%{}
     100%{
         margin-right: -100rem;
     }
@@ -122,15 +117,13 @@
     0%{
         margin-right: -100rem;
     }
-    50%{
-        margin-right: -10rem;;
-    }
     100%{
         margin-right: 0;
     }
   }
 
 .project-info{
+    height: auto;
     padding: 5rem 2rem;
     display: flex;
     flex-wrap: wrap;

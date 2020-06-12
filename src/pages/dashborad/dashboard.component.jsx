@@ -3,6 +3,9 @@ import React,{Component} from 'react';
 import './dashboard.styles.scss';
 import { Link } from 'react-router-dom';
 
+import InfoCard from '../../components/info-card/info-card.component';
+
+
 class Dashboard extends Component{
 
     constructor(){
@@ -11,13 +14,35 @@ class Dashboard extends Component{
             contributor:false,
             todo:'',
             doing:'',
-            done:''
+            done:'',
+            createtodo:false,
+            createdoing:false,
+            createdone:false
         }
     }
 
 
     showcontribution=()=>{
         this.setState(prevState=>({contributor:!prevState.contributor}))
+    }
+
+    createtodo=()=>{
+        this.setState(prevState=>({createtodo:true}))
+    }
+    doing=()=>{
+        this.setState(prevState=>({doing:true}))
+    }
+    done=()=>{
+        this.setState(prevState=>({done:true}))
+    }
+    changevisibility1=()=>{
+        this.setState({createtodo:false});
+    }
+    changevisibility2=()=>{
+        this.setState({doing:false});
+    }
+    changevisibility3=()=>{
+        this.setState({done:false});
     }
 
     render(){
@@ -41,9 +66,9 @@ class Dashboard extends Component{
 
                     <div className={`contributor-info ${contributor ?"contributor-info-visible":"contributor-info-invisible"}`}>
                             <h1 className="contributor-info-heading">contributors</h1>
-                            <h3>AMAN BHARTI</h3>
-                            <h3>AMAN BHARTI</h3>
-                            <h3>ANSHU THE KING</h3>
+                            <h3>AMAN</h3>
+                            <h3>AMAN</h3>
+                            <h3>BHARTI</h3>
                         </div>
 
 
@@ -54,14 +79,16 @@ class Dashboard extends Component{
                                 <div className="info-box">
 
                                 </div>
-                                <div className="info-add">+ Add card</div>
+                                <InfoCard link="hello" visibility={this.state.createtodo} changevisibility={this.changevisibility1}></InfoCard>
+                                <div className="info-add" onClick={this.createtodo} >+ Add card</div>
                         </div>
                         <div className="info info-doing">
                                 Doing
                                 <div className="info-box">
 
                                 </div>
-                                <div className="info-add">+ Add card</div>
+                                <InfoCard link="hello2" visibility={this.state.doing} changevisibility={this.changevisibility2}></InfoCard>
+                                <div className="info-add" onClick={this.doing}>+ Add card</div>
                         </div>
 
                         <div className="info info-done">
@@ -69,12 +96,15 @@ class Dashboard extends Component{
                                 <div className="info-box">
 
                                 </div>
-
-                                <div className="info-add">+ Add card</div>
+                                <InfoCard link="hello3" visibility={this.state.done} changevisibility={this.changevisibility3}></InfoCard>
+                                <div className="info-add" onClick={this.done}>+ Add card</div>
                         </div>
                     </div>
 
                 </div>
+                
+
+
             </div>
         )
     }
