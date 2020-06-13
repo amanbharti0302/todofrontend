@@ -35,9 +35,9 @@ class Navbar extends Component{
             </div>
 
             <div className={`navbar-links ${isBoxVisible ? "visible" : "hidden"}`}>
-                    <Link href="/" className="navbar-link navbar-link__1 ">Events</Link>
-                    <Link href="/" className="navbar-link navbar-link__2 ">Team</Link>
-                    <Link href="/" className="navbar-link navbar-link__3 ">Gallery</Link>
+                    {/* <Link to="/" className="navbar-link navbar-link__1 ">my projects</Link>
+                    <Link to="/" className="navbar-link navbar-link__2 ">Team</Link> */}
+                    <Link to="/" className="navbar-link navbar-link__3 ">MY PROJECTS</Link>
                     <Link to="/signup" className="navbar-link navbar-link__4 btn btn-purple">Create Account for free</Link>
             </div>
         </div>
