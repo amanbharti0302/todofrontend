@@ -2,8 +2,6 @@ import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.styles.scss';
 
-// import Logo from '../../assets/logo-nav.svg';
-
 class Navbar extends Component{
     constructor(){
         super();
@@ -31,9 +29,9 @@ class Navbar extends Component{
                     <span className="navigation__icon">&nbsp;</span>
             </label>
 
-            {/* <div className="navbar-logo">
-                <Link to="/"><img src={Logo} alt="LOGO" className="navbar-logo-img"></img></Link>
-            </div> */}
+            <div className="navbar-logo">
+                <Link to="/"><img src="https://img.icons8.com/clouds/100/000000/todo-list.png" alt="LOGO" className="navbar-logo-img"></img></Link>
+            </div>
             </div>
 
             <div className={`navbar-links ${isBoxVisible ? "visible" : "hidden"}`}>

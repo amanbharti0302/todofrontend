@@ -88,6 +88,7 @@
 
 .section-navbar{
     position: fixed;
+    padding: 3px 0;
     background-color: #fff;
     z-index: 10;
     width: 100%;
@@ -115,11 +116,10 @@
         order: 0;
         &-img{
             background-position: center;
-            width: 10rem;
-            height: 70px;
+            height: 50px;
             padding: 0;
             margin:0 ;
-            transition: all 0.2s;
+            transition: all 0.1s;
             @media only screen and (max-width: 780px) {
                 width: 8rem;
                 height: 50px;
@@ -136,8 +136,8 @@
 
         &-img:hover{
             background-position: center;
-            width: 10.2rem;
-            height: 70px;
+            //width: 10.2rem;
+            height: 51px;
             padding: 0;
             margin:0 ;
             @media only screen and (max-width: 780px) {

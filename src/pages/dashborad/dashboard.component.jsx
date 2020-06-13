@@ -4,6 +4,7 @@ import './dashboard.styles.scss';
 import { Link } from 'react-router-dom';
 
 import InfoCard from '../../components/info-card/info-card.component';
+import ShowCard from '../../components/showcard/showcard.component';
 
 
 class Dashboard extends Component{

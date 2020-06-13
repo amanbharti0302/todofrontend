@@ -1,0 +1,25 @@
+.home{
+    padding: 5rem 0 0 0; 
+ }
+ .section-top{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .content{
+
+    &-div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: blue;
+ }
+ .top-img{
+     height: 85vh;
+ }
