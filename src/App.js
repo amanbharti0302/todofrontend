@@ -7,6 +7,7 @@ import Navbar from './components/navbar/navbar.component';
 import Dashboard from './pages/dashborad/dashboard.component';
 import HomePage from './pages/homepage/homepage.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import Allproject from './pages/allprojects/allproject.component';
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
       <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/signup' component={SignInAndSignUpPage}/>
-
-      {/* <Dashboard/> */}
+      <Route exact path='/projects/:id' component={Allproject}/>
+      <Route exact path='/dashboard/:id' component={Dashboard}/>
       </Switch>
     </div>
   );
