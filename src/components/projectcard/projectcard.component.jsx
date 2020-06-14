@@ -18,10 +18,10 @@ class Projectcard extends Component{
 
         return(
             <div className="project-card">
-                <h4>name</h4>
-                <p>description</p>
-                <div>created At </div>
-                <Link to="/dashboard/:1234">Enter project</Link>
+                <h4 className="card card-name">name</h4>
+                <p className="card card-description">description</p>
+                <div className="card card-date">created At </div>
+                <Link className="card-link" to="/dashboard/:1234">Enter project &rArr;</Link>
             </div>
         )
     }

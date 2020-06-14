@@ -20,7 +20,6 @@ class Navbar extends Component{
 
     return(
     <div className="section-navbar">
-        <title>covidcare</title>
         
         <div className="navbar">
            <div className="nav-con" >
@@ -30,7 +29,8 @@ class Navbar extends Component{
             </label>
 
             <div className="navbar-logo">
-                <Link to="/"><img src="https://img.icons8.com/clouds/100/000000/todo-list.png" alt="LOGO" className="navbar-logo-img"></img></Link>
+                <Link to="/" className="navlinknew"><img src="https://img.icons8.com/clouds/100/000000/todo-list.png" alt="LOGO" className="navbar-logo-img"></img><h4>home</h4></Link>
+          
             </div>
             </div>
 

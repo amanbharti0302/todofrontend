@@ -19,6 +19,7 @@ class Allproject extends Component{
 
         return(
             <div className="project-page">
+                <title>TO DO |MY PROJECTS</title>
                 <div className="project-content">
                     <Projectcard/>
                     <Projectcard/>

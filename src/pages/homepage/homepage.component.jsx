@@ -11,6 +11,7 @@ class HomePage extends Component{
     render(){
         return(
             <div className="home">
+                <title>TO DO |HOME</title>
                 <div className="section-top">
                 <img src={welcomeleft} alt="WELCOME LEFT" className="top-img"/>
                 <div className="content-div">

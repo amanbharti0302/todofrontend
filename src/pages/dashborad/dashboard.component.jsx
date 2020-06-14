@@ -57,6 +57,7 @@ class Dashboard extends Component{
                 </div>
 
                 <div className="dash-main">
+                <title>TO DO |PROJECT</title>
                     <div className="pr-nav">
                         <div className="pr pr-name">Project name</div>
                         <div className="pr pr-description">project description</div>
